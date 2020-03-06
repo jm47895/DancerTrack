@@ -19,23 +19,23 @@ android {
     flavorDimensions "default"
 
     productFlavors {
-        director{
-            applicationIdSuffix ".dir"
+        director {
+            applicationId "com.example.dancertrack.dir"
             versionNameSuffix "-director"
         }
-        instructor{
-            applicationIdSuffix ".ins"
+        instructor {
+            applicationId "com.example.dancertrack.ins"
             versionNameSuffix "-instructor"
         }
 
-        student{
-            applicationIdSuffix ".stu"
-            versionNameSuffix "student"
+        student {
+            applicationId "com.example.dancertrack.stu"
+            versionNameSuffix "-student"
         }
     }
 
     buildTypes {
-        debug{
+        debug {
             applicationIdSuffix ".debug"
             debuggable true
         }
@@ -43,6 +43,33 @@ android {
             applicationIdSuffix ".release"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        director {
+            java {
+                srcDirs 'src/director/java'
+            }
+            resources {
+                srcDirs 'src/director/res', 'src/director/res/'
+            }
+        }
+        instructor {
+            java {
+                srcDirs 'src/instructor/java', 'src/instructor/java/'
+
+            }
+            res {
+                srcDirs 'src/instructor/res', 'src/instructor/res/'
+            }
+        }
+        student {
+            java {
+                srcDirs 'src/student/java', 'src/student/java/'
+            }
+            res {
+                srcDirs 'src/student/res', 'src/student/res/'
+            }
         }
     }
 

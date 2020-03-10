@@ -10,7 +10,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val textView : TextView = findViewById(R.id.instructor_text)
-        textView.text = "This is instructor text"
     }
 }
